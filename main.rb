@@ -47,7 +47,7 @@ end
 
 credentials = YAML.load(File.read('credentials.secret.yaml'))
 
-login = LoginCommand.new(credentials['username'], credentials['password'], "kg0xzxh1rldxwe3mawhbps5qzkdt1t1ugofvyua4")
+login = LoginCommand.new(credentials['username'], credentials['password'], credentials['customer_secret'])
 token = login.execute()['token']
 
 account_id = 'deadbeef'
